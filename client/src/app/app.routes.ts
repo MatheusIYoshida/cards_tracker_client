@@ -31,11 +31,6 @@ export const routes: Routes = [
         component: MainLayout,
         children: [
             {
-                path: '',
-                pathMatch: 'full',
-                redirectTo: 'dashboard'
-            },
-            {
                 path: 'dashboard',
                 loadComponent: () => import('./dashboard/dashboard').then(m => m.Dashboard)
             },
@@ -45,10 +40,6 @@ export const routes: Routes = [
                     {
                         path: '',
                         loadComponent: () => import('./cards/cards-list/cards-list').then(m => m.CardsList)
-                    },
-                    {
-                        path: 'new',
-                        loadComponent: () => import('./cards/card-form/card-form').then(m => m.CardForm)
                     }
                 ]
             }

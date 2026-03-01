@@ -1,0 +1,65 @@
+<form class="cards-form">
+  <div class="cards-form__row">
+    <app-form-input
+      [enableLabel]="true"
+      [labelText]="'Card number'"
+      [type]="'text'"
+      [placeholderText]="'e.g. PROJ-1234'"
+      [maxLength]="50"
+    ></app-form-input>
+    <app-form-input
+      [enableLabel]="true"
+      [labelText]="'Title'"
+      [type]="'text'"
+      [placeholderText]="'Short summary of the card'"
+      [maxLength]="120"
+    ></app-form-input>
+  </div>
+
+  <div class="cards-form__row">
+    <app-form-input
+      [enableLabel]="true"
+      [labelText]="'Module'"
+      [type]="'text'"
+      [placeholderText]="'Module or area'"
+      [maxLength]="80"
+    ></app-form-input>
+    <app-form-input
+      [enableLabel]="true"
+      [labelText]="'Type'"
+      [type]="'text'"
+      [placeholderText]="'Bug, incident, feature...'"
+      [maxLength]="40"
+    ></app-form-input>
+  </div>
+
+  <div class="cards-form__row">
+    <app-form-input
+      [enableLabel]="true"
+      [labelText]="'Target date'"
+      [type]="'date'"
+      [placeholderText]="''"
+      [maxLength]="10"
+    ></app-form-input>
+    <app-form-input
+      [enableLabel]="true"
+      [labelText]="'Date started'"
+      [type]="'date'"
+      [placeholderText]="''"
+      [maxLength]="10"
+    ></app-form-input>
+  </div>
+
+  <app-form-input
+    [enableLabel]="true"
+    [labelText]="'Description'"
+    [type]="'text'"
+    [placeholderText]="'What is this card about?'"
+    [maxLength]="255"
+  ></app-form-input>
+
+  <div class="cards-form__actions">
+    <app-form-button [btnText]="'Save card'"></app-form-button>
+  </div>
+</form>
+

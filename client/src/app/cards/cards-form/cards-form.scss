@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as vars;
+
+.cards-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__row {
+    display: flex;
+    gap: 12px;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+  }
+
+  &__actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+

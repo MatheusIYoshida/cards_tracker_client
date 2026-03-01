@@ -33,14 +33,11 @@
 
   <aside class="sidebar" [class.sidebar--open]="sidebarOpen">
     <nav class="sidebar__nav">
-      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeSidebar()" class="nav-link">
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
         Dashboard
       </a>
-      <a routerLink="/cards" routerLinkActive="active" (click)="closeSidebar()" class="nav-link">
+      <a routerLink="/cards" routerLinkActive="active" class="nav-link">
         Cards
-      </a>
-      <a routerLink="/cards/new" (click)="closeSidebar()" class="nav-link nav-link--cta">
-        + New Card
       </a>
     </nav>
   </aside>

@@ -9,16 +9,12 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MainLayout implements OnDestroy {
   brandName = 'Cards Tracker';
-  sidebarOpen = false;
+  sidebarOpen = true;
   profileOpen = false;
   private documentClickListener: (() => void) | null = null;
 
   toggleSidebar(): void {
     this.sidebarOpen = !this.sidebarOpen;
-  }
-
-  closeSidebar(): void {
-    this.sidebarOpen = false;
   }
 
   toggleProfile(): void {
