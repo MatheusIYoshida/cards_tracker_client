@@ -1,9 +1,11 @@
-<div class="form">
+<mat-form-field appearance="outline" class="form-field">
     @if (enableLabel) {
-        <label class="form-label">{{ labelText }}:</label>
+        <mat-label>{{ labelText }}</mat-label>
     }
-    <input class="form-input" 
-        [attr.placeholder]="placeholderText" 
+    <input 
+        matInput
+        [placeholder]="placeholderText"
         [attr.maxlength]="maxLength"
-        [attr.type]="type"/>
-</div>    
+        [type]="type"
+    >   
+</mat-form-field>   

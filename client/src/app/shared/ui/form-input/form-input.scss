@@ -1,33 +1,29 @@
 @use '../../../../styles/variables' as vars;
 
-.form{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
-    &-label{
-        font-size: 16px;
-        padding-left: 7px;
-    }
+.form-field {
+  width: 265px;
+}
 
-    &-input{
-        width: 250px;
-        padding: 10px;
-        font-size: 16px;
-        border: 2px solid vars.$border-color;
-        border-radius: 12px;
-        background-color: vars.$bg-input;
-        transition: all 0.3s ease;
-        color: #fff;
-    }
+::ng-deep .mat-mdc-form-field .mdc-text-field__input {
+  color: #fff !important;
+}
 
-    &-input:focus{
-        outline: none;
-        border-color: #6366f1;
-        box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
-    }
+::ng-deep .mat-mdc-form-field .mdc-floating-label {
+  color: vars.$text-muted !important;
+}
 
-    &-input::placeholder{
-        color: vars.$text-muted;
-    }
+::ng-deep .mat-mdc-form-field .mdc-notched-outline__leading,
+::ng-deep .mat-mdc-form-field .mdc-notched-outline__notch,
+::ng-deep .mat-mdc-form-field .mdc-notched-outline__trailing {
+  border-color: vars.$primary !important;
+}
+
+::ng-deep .mat-mdc-form-field .mdc-notched-outline {
+  border-radius: 8px !important;
 }

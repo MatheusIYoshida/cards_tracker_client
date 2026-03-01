@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-form-input',
-  imports: [],
+  imports: [CommonModule, MatFormFieldModule, MatInputModule],
   templateUrl: './form-input.html',
   styleUrl: './form-input.scss',
 })
