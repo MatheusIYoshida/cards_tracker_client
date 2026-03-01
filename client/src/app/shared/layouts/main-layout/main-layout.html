@@ -1,0 +1,51 @@
+<div class="app">
+  <div class="bg">
+    <div class="bg-grid"></div>
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-orange"></div>
+  </div>
+
+  <header class="header">
+    <div class="header__left">
+      <button class="hamburger" (click)="toggleSidebar()" type="button" aria-label="Toggle menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <span class="header__project-name">{{ brandName }}</span>
+    </div>
+
+    <div class="header__right">
+      <div class="profile-trigger" (click)="toggleProfile()" role="button" tabindex="0" (keydown.enter)="toggleProfile()" (keydown.space)="toggleProfile(); $event.preventDefault()">
+        <div class="profile-avatar">U</div>
+        <span class="profile-name">User</span>
+        <span class="profile-chevron" [class.profile-chevron--open]="profileOpen">&#9660;</span>
+      </div>
+
+      @if (profileOpen) {
+        <div class="profile-dropdown" (click)="$event.stopPropagation()">
+          <a routerLink="/dashboard" (click)="closeProfile()" class="profile-dropdown__item">My Profile</a>
+          <a routerLink="/auth/login" (click)="closeProfile()" class="profile-dropdown__item">Logout</a>
+        </div>
+      }
+    </div>
+  </header>
+
+  <aside class="sidebar" [class.sidebar--open]="sidebarOpen">
+    <nav class="sidebar__nav">
+      <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeSidebar()" class="nav-link">
+        Dashboard
+      </a>
+      <a routerLink="/cards" routerLinkActive="active" (click)="closeSidebar()" class="nav-link">
+        Cards
+      </a>
+      <a routerLink="/cards/new" (click)="closeSidebar()" class="nav-link nav-link--cta">
+        + New Card
+      </a>
+    </nav>
+  </aside>
+
+  <main class="content" [class.content--shifted]="sidebarOpen">
+    <router-outlet></router-outlet>
+  </main>
+</div>
