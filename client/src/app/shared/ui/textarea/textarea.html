@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline">
+    <mat-label *ngIf="enableLabel">{{ labelText }}</mat-label>
+
+    <textarea
+        matInput
+        [placeholder]="placeholderText"
+        [attr.maxlength]="maxlength"
+        [rows]="rows"></textarea>
+</mat-form-field>
