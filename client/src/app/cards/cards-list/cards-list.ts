@@ -1,21 +1,32 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CardsForm } from '../cards-form/cards-form';
 
 @Component({
   selector: 'app-cards-list',
   standalone: true,
-  imports: [CardsForm],
+  imports: [CommonModule, CardsForm],
   templateUrl: './cards-list.html',
   styleUrl: './cards-list.scss',
 })
 export class CardsList {
-  isCreateModalOpen = false;
+  openingModal = false;
+  closingModal = false;
 
-  openCreateModal(): void {
-    this.isCreateModalOpen = true;
+  openModal(): void {
+    this.openingModal = true;
   }
 
-  closeCreateModal(): void {
-    this.isCreateModalOpen = false;
+  closeModal(): void {
+    if (!this.openingModal || this.closingModal) {
+      return; 
+    }
+
+    this.closingModal = true;
+
+    setTimeout(() => {
+      this.closingModal = false;
+      this.openingModal = false;
+    }, 250); 
   }
 }

@@ -1,23 +1,23 @@
 <div class="cards-list">
   <div class="cards-list__header">
     <h1 class="cards-list__title">Cards</h1>
-    <button type="button" class="cards-list__new-btn" (click)="openCreateModal()">
+    <button type="button" class="cards-list__new-btn" (click)="openModal()">
       + New card
     </button>
   </div>
 
   <p class="cards-list__subtitle">Your cards list will appear here.</p>
 
-  @if (isCreateModalOpen) {
-    <div class="cards-modal-backdrop" (click)="closeCreateModal()">
-      <div class="cards-modal" (click)="$event.stopPropagation()">
+  <ng-container *ngIf="openingModal || closingModal">
+    <div class="cards-modal-backdrop" [class.closing]="closingModal" (click)="closeModal()">
+      <div class="cards-modal" [class.closing]="closingModal" (click)="$event.stopPropagation()">
         <div class="cards-modal__header">
           <h2 class="cards-modal__title">New Card</h2>
           <button
             type="button"
             class="cards-modal__close"
             aria-label="Close"
-            (click)="closeCreateModal()"
+            (click)="closeModal()"
           >
             ✕
           </button>
@@ -26,5 +26,5 @@
         <app-cards-form></app-cards-form>
       </div>
     </div>
-  }
+  </ng-container>
 </div>
