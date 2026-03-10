@@ -1,0 +1,11 @@
+{
+    "login": {
+        "sign-in": "Entrar",
+        "divider": "O",
+        "email": "E-mail",
+        "email-placeholder": "tu@email.com",
+        "password": "Contraseña",
+        "sign-up": "¿Aún no tienes una cuenta?",
+        "sign-up-link": "Registro"
+    }
+}

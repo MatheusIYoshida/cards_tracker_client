@@ -1,24 +1,24 @@
 <div class="login-form">
   <app-form-input
     [enableLabel]="true"
-    [labelText]="'Email'"
+    [labelText]="'login.email'"
     [type]="'email'"
-    [placeholderText]="'your@email.com'"
+    [placeholderText]="'login.email-placeholder'"
     [maxLength]="100"
   ></app-form-input>
   <app-form-input
     [enableLabel]="true"
-    [labelText]="'Password'"
+    [labelText]="'login.password'"
     [type]="'password'"
     [placeholderText]="'********'"
     [maxLength]="100"
   ></app-form-input>
   <app-form-button 
-    [btnText]="'SIGN IN'"
+    [btnText]="'login.sign-in'"
     [routerLink]="'/dashboard'"
   ></app-form-button>
-  <div class="divider">{{ dividerText }}</div>
+  <div class="divider">{{ 'login.divider' | translate }}</div>
   <div class="signup-link">
-    {{ signupText }} <a routerLink="/auth/register">{{ signupLinkText }}</a>
+    {{ 'login.sign-up' | translate }} <a routerLink="/auth/register">{{ 'login.sign-up-link' | translate }}</a>
   </div>
 </div>

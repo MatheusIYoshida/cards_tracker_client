@@ -1,8 +1,8 @@
 <mat-form-field appearance="outline">
-    <mat-label *ngIf="enableLabel">{{ labelText }}</mat-label>
+    <mat-label *ngIf="enableLabel">{{ labelText | translate }}</mat-label>
     <input 
         matInput
-        [placeholder]="placeholderText"
+        [placeholder]="placeholderText | translate"
         [attr.maxlength]="maxLength"
         [type]="type"
     >   

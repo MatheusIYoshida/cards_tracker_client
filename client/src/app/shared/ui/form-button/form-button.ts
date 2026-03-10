@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-form-button',
-  imports: [RouterModule],
+  imports: [RouterModule, TranslateModule],
   templateUrl: './form-button.html',
   styleUrl: './form-button.scss',
 })
