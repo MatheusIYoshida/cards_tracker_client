@@ -1,18 +1,27 @@
 {
+    "auth": {
+        "slogan": "Track your progress, visualize your impact"
+    },
     "cd": {
         "icon": "C",
         "name": "Cards Tracker"
     },
-    "auth": {
-        "slogan": "Track your progress, visualize your impact"
+    "input": {
+        "name": "Name",
+        "name-placeholder": "Your Name",
+        "email": "E-mail",
+        "email-placeholder": "your@email.com",
+        "password": "Password"
     },
     "login": {
         "sign-in": "Sign In",
         "divider": "Or",
-        "email": "E-mail",
-        "email-placeholder": "your@email.com",
-        "password": "Password",
         "sign-up": "Don't have an account?",
         "sign-up-link": "Sign Up"
+    },
+    "register": {
+        "create-account": "Create Account",
+        "sign-in": "Already have an account?",
+        "sign-in-link": "Sign In"
     }
 }

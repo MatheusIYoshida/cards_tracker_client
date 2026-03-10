@@ -1,30 +1,30 @@
 <div class="register-form">
     <app-form-input
         [enableLabel]="true"
-        [labelText]="'Name'"
+        [labelText]="'input.name'"
         [type]="'text'"
-        [placeholderText]="'Your Name'"
+        [placeholderText]="'input.name-placeholder'"
         [maxLength]="100"
     ></app-form-input>
     <app-form-input
         [enableLabel]="true"
-        [labelText]="'Email'"
+        [labelText]="'input.email'"
         [type]="'email'"
-        [placeholderText]="'your@email.com'"
+        [placeholderText]="'input.email-placeholder'"
         [maxLength]="100"
     ></app-form-input>
     <app-form-input
         [enableLabel]="true"
-        [labelText]="'Password'"
+        [labelText]="'input.password'"
         [type]="'password'"
         [placeholderText]="'********'"
         [maxLength]="100"
     ></app-form-input>
     <app-form-button 
-        [btnText]="'CREATE ACCOUNT'"
+        [btnText]="'register.create-account'"
         [routerLink]="'/auth/login'"
     ></app-form-button>
     <div class="signin-link">
-        {{ signinText }} <a routerLink="/auth/login">{{ signinLinkText }}</a>
+        {{ 'register.sign-in' | translate }} <a routerLink="/auth/login">{{ 'register.sign-in-link' | translate }}</a>
     </div>
 </div>

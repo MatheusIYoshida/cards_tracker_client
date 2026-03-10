@@ -15,6 +15,6 @@ export class App implements OnInit {
   }
 
   ngOnInit() {
-    localStorage.setItem('lang', 'pt-br');
+    localStorage.setItem('lang', 'es');
   }
 }
