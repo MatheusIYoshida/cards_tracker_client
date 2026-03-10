@@ -1,4 +1,11 @@
 {
+    "cd": {
+        "icon": "C",
+        "name": "Cards Tracker"
+    },
+    "auth": {
+        "slogan": "Acompanhe seu progresso, visualize seu impacto"
+    },
     "login": {
         "sign-in": "Entrar",
         "divider": "Ou",
