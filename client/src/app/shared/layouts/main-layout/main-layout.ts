@@ -1,9 +1,15 @@
 import { Component, HostListener, OnDestroy } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-layout',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [
+    RouterOutlet, 
+    RouterLink, 
+    RouterLinkActive,
+    TranslateModule
+  ],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
 })

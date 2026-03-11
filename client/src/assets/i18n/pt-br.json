@@ -19,6 +19,16 @@
         "sign-up": "Ainda não tem uma conta?",
         "sign-up-link": "Cadastre-se"
     },
+    "main-layout": {
+        "header": {
+            "profile": "My Profile",
+            "logout": "Logout"
+        },
+        "sidebar": {
+            "dashboard": "Dashboard",
+            "cards": "Cards"
+        }
+    },
     "register": {
         "create-account": "Criar Conta",
         "sign-in": "Já tem uma conta?",

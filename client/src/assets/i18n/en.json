@@ -19,6 +19,16 @@
         "sign-up": "Don't have an account?",
         "sign-up-link": "Sign Up"
     },
+    "main-layout": {
+        "header": {
+            "profile": "My Profile",
+            "logout": "Logout"
+        },
+        "sidebar": {
+            "dashboard": "Dashboard",
+            "cards": "Cards"
+        }
+    },
     "register": {
         "create-account": "Create Account",
         "sign-in": "Already have an account?",
