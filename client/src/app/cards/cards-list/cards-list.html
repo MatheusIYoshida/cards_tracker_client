@@ -5,26 +5,6 @@
       + New card
     </button>
   </div>
-
   <p class="cards-list__subtitle">Your cards list will appear here.</p>
-
-  <ng-container *ngIf="openingModal || closingModal">
-    <div class="cards-modal-backdrop" [class.closing]="closingModal" (click)="closeModal()">
-      <div class="cards-modal" [class.closing]="closingModal" (click)="$event.stopPropagation()">
-        <div class="cards-modal__header">
-          <h2 class="cards-modal__title">New Card</h2>
-          <button
-            type="button"
-            class="cards-modal__close"
-            aria-label="Close"
-            (click)="closeModal()"
-          >
-            ✕
-          </button>
-        </div>
-
-        <app-cards-form></app-cards-form>
-      </div>
-    </div>
-  </ng-container>
+  <app-cards-form></app-cards-form>
 </div>

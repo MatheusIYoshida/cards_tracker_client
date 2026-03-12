@@ -1,56 +1,65 @@
-<form class="cards-form">
-  <div class="cards-form__row">
-    <app-form-input
-      [enableLabel]="true"
-      [labelText]="'Card number'"
-      [type]="'text'"
-      [maxLength]="50"
-    ></app-form-input>
-    <app-form-input
-      [enableLabel]="true"
-      [labelText]="'Title'"
-      [type]="'text'"
-      [maxLength]="120"
-    ></app-form-input>
+<ng-container *ngIf="openingModal || closingModal">
+  <div class="cards-modal-backdrop" [class.closing]="closingModal" (click)="closeModal()">
+    <div class="cards-modal" [class.closing]="closingModal" (click)="$event.stopPropagation()">
+      <div class="cards-modal__header">
+        <h2 class="cards-modal__title">New Card</h2>
+        <button type="button" class="cards-modal__close" aria-label="Close" (click)="closeModal()">✕</button>
+      </div>
+      <form class="cards-form">
+        <div class="cards-form__row">
+          <app-form-input
+            [enableLabel]="true"
+            [labelText]="'Card number'"
+            [type]="'text'"
+            [maxLength]="50"
+          ></app-form-input>
+          <app-form-input
+            [enableLabel]="true"
+            [labelText]="'Title'"
+            [type]="'text'"
+            [maxLength]="120"
+          ></app-form-input>
+        </div>
+
+        <div class="cards-form__row">
+          <app-form-input
+            [enableLabel]="true"
+            [labelText]="'Module'"
+            [type]="'text'"
+            [maxLength]="80"
+          ></app-form-input>
+          <app-form-input
+            [enableLabel]="true"
+            [labelText]="'Type'"
+            [type]="'text'"
+            [maxLength]="40"
+          ></app-form-input>
+        </div>
+
+        <div class="cards-form__row">
+          <app-form-input
+            [enableLabel]="true"
+            [labelText]="'Target date'"
+            [type]="'date'"
+            [maxLength]="10"
+          ></app-form-input>
+          <app-form-input
+            [enableLabel]="true"
+            [labelText]="'Date started'"
+            [type]="'date'"
+            [maxLength]="10"
+          ></app-form-input>
+        </div>
+
+        <app-textarea
+          [enableLabel]="true"
+          [labelText]="'Description'"
+        ></app-textarea>
+
+        <div class="cards-form__actions">
+          <app-form-button [btnText]="'Save card'"></app-form-button>
+        </div>
+      </form>
+    </div>
   </div>
-
-  <div class="cards-form__row">
-    <app-form-input
-      [enableLabel]="true"
-      [labelText]="'Module'"
-      [type]="'text'"
-      [maxLength]="80"
-    ></app-form-input>
-    <app-form-input
-      [enableLabel]="true"
-      [labelText]="'Type'"
-      [type]="'text'"
-      [maxLength]="40"
-    ></app-form-input>
-  </div>
-
-  <div class="cards-form__row">
-    <app-form-input
-      [enableLabel]="true"
-      [labelText]="'Target date'"
-      [type]="'date'"
-      [maxLength]="10"
-    ></app-form-input>
-    <app-form-input
-      [enableLabel]="true"
-      [labelText]="'Date started'"
-      [type]="'date'"
-      [maxLength]="10"
-    ></app-form-input>
-  </div>
-
-  <app-textarea
-    [enableLabel]="true"
-    [labelText]="'Description'"
-  ></app-textarea>
-
-  <div class="cards-form__actions">
-    <app-form-button [btnText]="'Save card'"></app-form-button>
-  </div>
-</form>
-
+</ng-container>
