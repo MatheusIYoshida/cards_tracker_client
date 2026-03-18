@@ -2,6 +2,24 @@
     "auth": {
         "slogan": "Track your progress, visualize your impact"
     },
+    "btn": {
+        "add": "Add",
+        "save": "Save"
+    },
+    "cards": {
+        "form": {
+            "title": "New card",
+            "label": {
+                "code": "Card Code",
+                "description": "Description",
+                "link": "Card Link",
+                "start-date": "Start Date",
+                "target-date": "Target Date",
+                "title": "Title",
+                "type": "Type"
+            }
+        }
+    },
     "cd": {
         "icon": "C",
         "name": "Cards Tracker"

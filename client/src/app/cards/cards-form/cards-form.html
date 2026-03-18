@@ -3,19 +3,21 @@
     <div class="cards-modal" [class.closing]="closingModal" (click)="$event.stopPropagation()">
       <div class="cards-modal__header">
         <h2 class="cards-modal__title">New Card</h2>
-        <button type="button" class="cards-modal__close" aria-label="Close" (click)="closeModal()">✕</button>
+        <button type="button" class="cards-modal__close" aria-label="Close" (click)="closeModal()">
+          <mat-icon class="cards-modal__close-icon" aria-hidden="true">close</mat-icon>
+        </button>
       </div>
       <form class="cards-form">
         <div class="cards-form__row">
           <app-form-input
             [enableLabel]="true"
-            [labelText]="'Card number'"
+            [labelText]="'cards.form.label.code'"
             [type]="'text'"
             [maxLength]="50"
           ></app-form-input>
           <app-form-input
             [enableLabel]="true"
-            [labelText]="'Title'"
+            [labelText]="'cards.form.label.title'"
             [type]="'text'"
             [maxLength]="120"
           ></app-form-input>
@@ -24,13 +26,13 @@
         <div class="cards-form__row">
           <app-form-input
             [enableLabel]="true"
-            [labelText]="'Module'"
+            [labelText]="'cards.form.label.link'"
             [type]="'text'"
             [maxLength]="80"
           ></app-form-input>
           <app-form-input
             [enableLabel]="true"
-            [labelText]="'Type'"
+            [labelText]="'cards.form.label.type'"
             [type]="'text'"
             [maxLength]="40"
           ></app-form-input>
@@ -39,13 +41,13 @@
         <div class="cards-form__row">
           <app-form-input
             [enableLabel]="true"
-            [labelText]="'Target date'"
+            [labelText]="'cards.form.label.target-date'"
             [type]="'date'"
             [maxLength]="10"
           ></app-form-input>
           <app-form-input
             [enableLabel]="true"
-            [labelText]="'Date started'"
+            [labelText]="'cards.form.label.start-date'"
             [type]="'date'"
             [maxLength]="10"
           ></app-form-input>
@@ -53,11 +55,11 @@
 
         <app-textarea
           [enableLabel]="true"
-          [labelText]="'Description'"
+          [labelText]="'cards.form.label.description'"
         ></app-textarea>
 
         <div class="cards-form__actions">
-          <app-form-button [btnText]="'Save card'"></app-form-button>
+          <app-form-button [btnText]="'btn.save'"></app-form-button>
         </div>
       </form>
     </div>

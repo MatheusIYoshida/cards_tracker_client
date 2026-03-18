@@ -2,6 +2,24 @@
     "auth": {
         "slogan": "Acompanhe seu progresso, visualize seu impacto"
     },
+    "btn": {
+        "add": "Adicionar",
+        "save": "Salvar"
+    },
+    "cards": {
+        "form": {
+            "title": "Novo card",
+            "label": {
+                "code": "Código do card",
+                "description": "Descrição",
+                "link": "Link do card",
+                "start-date": "Data de início",
+                "target-date": "Data de término",
+                "title": "Título",
+                "type": "Tipo"
+            }
+        }
+    },
     "cd": {
         "icon": "C",
         "name": "Cards Tracker"
@@ -21,11 +39,11 @@
     },
     "main-layout": {
         "header": {
-            "profile": "My Profile",
-            "logout": "Logout"
+            "profile": "Meu Perfil",
+            "logout": "Sair"
         },
         "sidebar": {
-            "dashboard": "Dashboard",
+            "dashboard": "Painel",
             "cards": "Cards"
         }
     },
