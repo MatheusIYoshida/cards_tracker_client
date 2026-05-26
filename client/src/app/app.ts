@@ -10,11 +10,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class App implements OnInit {
   constructor(private translate: TranslateService) {
-    const savedLang = localStorage.getItem('lang') || 'en';
+    const savedLang = localStorage.getItem('lang') || 'pt-br';
     translate.use(savedLang);
   }
 
   ngOnInit() {
-    localStorage.setItem('lang', 'es');
+    localStorage.setItem('lang', 'pt-br');
   }
 }
