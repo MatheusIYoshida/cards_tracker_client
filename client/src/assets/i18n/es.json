@@ -25,26 +25,27 @@
         "name": "Cards Tracker"
     },
     "input": {
-        "name": "Nombre",
-        "name-placeholder": "Tu Nombre",
         "email": "E-mail",
         "email-placeholder": "tu@email.com",
+        "name": "Nombre",
+        "name-placeholder": "Tu Nombre",
         "password": "Contraseña"
     },
     "login": {
-        "sign-in": "Entrar",
         "divider": "O",
+        "sign-in": "Entrar",
         "sign-up": "¿Aún no tienes una cuenta?",
         "sign-up-link": "Registro"
     },
     "main-layout": {
         "header": {
-            "profile": "Mi Perfil",
-            "logout": "Salir"
+            "logout": "Salir",
+            "profile": "Mi Perfil"
         },
         "sidebar": {
+            "cards": "Tarjetas",
             "dashboard": "Panel",
-            "cards": "Tarjetas"
+            "types": "Tipos"
         }
     },
     "register": {
