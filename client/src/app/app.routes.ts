@@ -46,6 +46,10 @@ export const routes: Routes = [
             {
                 path: 'types',
                 loadComponent: () => import('./types/types').then(t => t.Types)
+            },
+            {
+                path: 'profile',
+                loadComponent: () => import('./profile/profile').then(p => p.Profile)
             }
         ]
     }

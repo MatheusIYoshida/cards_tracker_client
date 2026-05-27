@@ -18,7 +18,7 @@
 
       @if (profileOpen) {
         <div class="profile-dropdown" (click)="$event.stopPropagation()">
-          <a routerLink="/dashboard" (click)="closeProfile()" class="profile-dropdown__item">{{ 'main-layout.header.profile' | translate }}</a>
+          <a routerLink="/profile" (click)="closeProfile()" class="profile-dropdown__item">{{ 'main-layout.header.profile' | translate }}</a>
           <a routerLink="/auth/login" (click)="closeProfile()" class="profile-dropdown__item">{{ 'main-layout.header.logout' | translate }}</a>
         </div>
       }
